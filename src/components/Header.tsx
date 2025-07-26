@@ -122,6 +122,7 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
               </svg>
             </button>
           </div>
+          <div style={{ display: "none" }}></div>
         </div>
       </div>
     </header>
