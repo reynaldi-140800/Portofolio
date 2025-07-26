@@ -1,7 +1,7 @@
 "use client";
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -23,7 +23,7 @@ export const useScrollAnimation = ({
   trigger = "top 100%",
   start = "top 100%",
   animation,
-  stagger = 0
+  stagger = 0,
 }: UseScrollAnimationProps) => {
   const elementRef = useRef<HTMLDivElement>(null);
 
@@ -44,7 +44,7 @@ export const useScrollAnimation = ({
             start: start,
             toggleActions: "play none none none",
             once: true,
-          }
+          },
         });
       } else {
         // Animate single element
@@ -58,7 +58,7 @@ export const useScrollAnimation = ({
             start: start,
             toggleActions: "play none none none",
             once: true,
-          }
+          },
         });
       }
     }
@@ -68,42 +68,46 @@ export const useScrollAnimation = ({
 };
 
 // Pre-configured animation hooks
-export const useFadeInUp = (delay = 0) => useScrollAnimation({
-  start: "top 100%",
-  animation: {
-    from: { y: 20, opacity: 0 },
-    duration: 0.6,
-    ease: "power2.out",
-    delay
-  }
-});
+export const useFadeInUp = (delay = 0) =>
+  useScrollAnimation({
+    start: "top 100%",
+    animation: {
+      from: { y: 20, opacity: 0 },
+      duration: 0.6,
+      ease: "power2.out",
+      delay,
+    },
+  });
 
-export const useFadeInLeft = (delay = 0) => useScrollAnimation({
-  start: "top 100%",
-  animation: {
-    from: { x: -30, opacity: 0 },
-    duration: 0.6,
-    ease: "power2.out",
-    delay
-  }
-});
+export const useFadeInLeft = (delay = 0) =>
+  useScrollAnimation({
+    start: "top 100%",
+    animation: {
+      from: { x: -30, opacity: 0 },
+      duration: 0.6,
+      ease: "power2.out",
+      delay,
+    },
+  });
 
-export const useFadeInRight = (delay = 0) => useScrollAnimation({
-  start: "top 100%",
-  animation: {
-    from: { x: 30, opacity: 0 },
-    duration: 0.6,
-    ease: "power2.out",
-    delay
-  }
-});
+export const useFadeInRight = (delay = 0) =>
+  useScrollAnimation({
+    start: "top 100%",
+    animation: {
+      from: { x: 30, opacity: 0 },
+      duration: 0.6,
+      ease: "power2.out",
+      delay,
+    },
+  });
 
-export const useStaggerAnimation = (stagger = 0.1) => useScrollAnimation({
-  start: "top 110%", // Start earlier for stagger
-  animation: {
-    from: { y: 20, opacity: 0 },
-    duration: 0.5,
-    ease: "power2.out"
-  },
-  stagger
-});
+export const useStaggerAnimation = (stagger = 0.1) =>
+  useScrollAnimation({
+    start: "top 110%", // Start earlier for stagger
+    animation: {
+      from: { y: 20, opacity: 0 },
+      duration: 0.5,
+      ease: "power2.out",
+    },
+    stagger,
+  });

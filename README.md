@@ -1,5 +1,6 @@
 # 🎭 Portofolio Website using GSAP
-### *Modern React Portfolio with GSAP Animations*
+
+### _Modern React Portfolio with GSAP Animations_
 
 [![Next.js](https://img.shields.io/badge/Next.js-15.1.4-black?style=for-the-badge&logo=next.js)](https://nextjs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org)
@@ -13,6 +14,7 @@
 ## ✨ **Features**
 
 ### 🎨 **Design & User Experience**
+
 - **Apple-inspired design** with clean, minimalist aesthetics
 - **Fully responsive** - looks perfect on all devices
 - **Dark/Light mode toggle** with system preference detection
@@ -20,6 +22,7 @@
 - **Interactive hover effects** and micro-interactions
 
 ### 🎬 **Animation System**
+
 - **GSAP-powered animations** with ScrollTrigger integration
 - **Predictive loading** - content ready before user reaches it
 - **Optimized performance** with GPU acceleration
@@ -27,6 +30,7 @@
 - **Custom animation configs** for consistent timing
 
 ### 🛠️ **Technical Excellence**
+
 - **Next.js 15.1.4** with App Router architecture
 - **TypeScript** for type safety and better development experience
 - **Tailwind CSS** for utility-first styling
@@ -37,8 +41,8 @@
 
 ## 📱 **Sections**
 
-| 🏠 **Hero** | 👤 **About** | 💼 **Experience** | 🛠️ **Skills** | 📞 **Contact** |
-|-------------|--------------|-------------------|---------------|----------------|
+| 🏠 **Hero**                       | 👤 **About**             | 💼 **Experience**          | 🛠️ **Skills**       | 📞 **Contact**      |
+| --------------------------------- | ------------------------ | -------------------------- | ------------------- | ------------------- |
 | Landing with animated title & CTA | Personal info with stats | Timeline with work history | Animated skill bars | Contact form & info |
 
 ---
@@ -46,7 +50,8 @@
 ## 🚀 **Quick Start**
 
 ### **Prerequisites**
-- Node.js 18+ 
+
+- Node.js 18+
 - npm/yarn/pnpm
 
 ### **Installation**
@@ -116,32 +121,34 @@ npm start
 ## 🎨 **Tech Stack**
 
 ### **Core Technologies**
-| Technology | Version | Purpose |
-|------------|---------|---------|
-| ⚛️ **React** | 18+ | UI library for component-based architecture |
-| ⚡ **Next.js** | 15.1.4 | Full-stack React framework with App Router |
-| 📘 **TypeScript** | 5.0+ | Type safety and enhanced developer experience |
-| 🎨 **Tailwind CSS** | 3.0+ | Utility-first CSS framework |
+
+| Technology          | Version | Purpose                                       |
+| ------------------- | ------- | --------------------------------------------- |
+| ⚛️ **React**        | 18+     | UI library for component-based architecture   |
+| ⚡ **Next.js**      | 15.1.4  | Full-stack React framework with App Router    |
+| 📘 **TypeScript**   | 5.0+    | Type safety and enhanced developer experience |
+| 🎨 **Tailwind CSS** | 3.0+    | Utility-first CSS framework                   |
 
 ### **Animation & Interactions**
-| Technology | Purpose |
-|------------|---------|
-| 🎭 **GSAP** | High-performance animations |
-| 📜 **ScrollTrigger** | Scroll-based animation triggers |
-| 🌙 **Dark Mode** | Theme switching with system detection |
+
+| Technology           | Purpose                               |
+| -------------------- | ------------------------------------- |
+| 🎭 **GSAP**          | High-performance animations           |
+| 📜 **ScrollTrigger** | Scroll-based animation triggers       |
+| 🌙 **Dark Mode**     | Theme switching with system detection |
 
 ### **Development Tools**
-| Tool | Purpose |
-|------|---------|
-| 📦 **ESLint** | Code linting and formatting |
-| 🔧 **PostCSS** | CSS processing and optimization |
-| 🎯 **TypeScript Config** | Type checking configuration |
+
+| Tool                     | Purpose                         |
+| ------------------------ | ------------------------------- |
+| 📦 **ESLint**            | Code linting and formatting     |
+| 🔧 **PostCSS**           | CSS processing and optimization |
+| 🎯 **TypeScript Config** | Type checking configuration     |
 
 ---
 
-
-
 ### **Custom Server**
+
 ```bash
 # Build for production
 npm run build
@@ -161,11 +168,7 @@ npm start
 
 ---
 
-
-
 ---
-
-
 
 ## 🙏 **Acknowledgments**
 
@@ -184,5 +187,3 @@ npm start
 🔗 **Project Link:** [https://github.com/reynaldi-140800/reactJS](https://github.com/reynaldi-140800/reactJS)
 
 ---
-
-

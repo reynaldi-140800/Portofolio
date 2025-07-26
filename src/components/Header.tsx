@@ -18,27 +18,32 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
   useEffect(() => {
     if (mounted && headerRef.current && navRef.current) {
       const tl = gsap.timeline();
-      
+
       tl.from(headerRef.current, {
         y: -50,
         opacity: 0,
         duration: 0.8,
         ease: "power2.out",
-      })
-      .from(navRef.current.children, {
-        y: -20,
-        opacity: 0,
-        duration: 0.6,
-        stagger: 0.08,
-        ease: "power2.out",
-      }, "-=0.4");
+      }).from(
+        navRef.current.children,
+        {
+          y: -20,
+          opacity: 0,
+          duration: 0.6,
+          stagger: 0.08,
+          ease: "power2.out",
+        },
+        "-=0.4"
+      );
     }
   }, [mounted]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: "smooth",
+      });
     }
   };
 
@@ -52,34 +57,34 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
           <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Portfolio
           </div>
-          
+
           <nav ref={navRef} className="hidden md:flex space-x-8">
             <button
-              onClick={() => scrollToSection('hero')}
+              onClick={() => scrollToSection("hero")}
               className="text-[#010101] dark:text-[#ffffff] hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               Home
             </button>
             <button
-              onClick={() => scrollToSection('about')}
+              onClick={() => scrollToSection("about")}
               className="text-[#010101] dark:text-[#ffffff] hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               About
             </button>
             <button
-              onClick={() => scrollToSection('experience')}
+              onClick={() => scrollToSection("experience")}
               className="text-[#010101] dark:text-[#ffffff] hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               Experience
             </button>
             <button
-              onClick={() => scrollToSection('skills')}
+              onClick={() => scrollToSection("skills")}
               className="text-[#010101] dark:text-[#ffffff] hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               Skills
             </button>
             <button
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection("contact")}
               className="text-[#010101] dark:text-[#ffffff] hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               Contact
@@ -105,7 +110,7 @@ export default function Header({ toggleDarkMode }: HeaderProps) {
                 />
               </svg>
             </button>
-            
+
             {/* Mobile menu button */}
             <button className="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-[#010101] dark:text-[#ffffff]">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
