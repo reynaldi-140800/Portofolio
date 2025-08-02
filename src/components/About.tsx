@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SelfPhoto from "../../assets/icon/selfPhoto.png"; 
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -95,7 +96,7 @@ export default function About() {
           <div ref={imageRef} className="relative">
             <div className="w-full h-96 bg-gradient-to-br from-blue-400 to-purple-600 rounded-2xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300">
               <div className="w-full h-full bg-gray-200 dark:bg-gray-700 rounded-2xl flex items-center justify-center">
-                <span className="text-gray-500 dark:text-gray-400 text-lg">Your Photo Here</span>
+                <img style={{width: '500px', height: '500px'}} src={SelfPhoto.src} alt="Your Photo" className="object-cover rounded-2xl" />
               </div>
             </div>
 

@@ -2,6 +2,9 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Mandiri from "../../assets/icon/mandiri.png";
+import Harts from "../../assets/icon/harts.png";
+import Adhivasindo from  "../../assets/icon/adhivasindo.png";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -10,33 +13,73 @@ if (typeof window !== "undefined") {
 const experiences = [
   {
     id: 1,
-    company: "TechCorp Inc.",
-    position: "Senior Full-Stack Developer",
-    period: "2022 - Present",
+    company: "Hartis Imagineering",
+    position: "Frontend Web Developer",
+    period: "Jul 2023 - Saat ini | 2 bln",
+    location: "Surabaya, Jawa Timur, Indonesia",
     description:
-      "Led development of cloud-based applications using React, Node.js, and AWS. Managed a team of 5 developers and implemented CI/CD pipelines.",
-    technologies: ["React", "Node.js", "TypeScript", "AWS", "PostgreSQL"],
+      "As a Front End Developer, I was responsible for developing Bhakti SuperApps, an integrated web platform for Yayasan Bhakti Wiyata, an educational institution focused on health and medical sciences. The project was adopted to be scalable, modern, and capable of supporting the institution's digital transformation across multiple educational and administrative units.\nI utilized React to build dynamic and modular user interfaces, Gatsby for high performance static site generation, and Material UI to deliver a consistent and intuitive user experience across devices.",
+    technologies: ["ReactJS", "GatsbyJS", "Material UI"],
     color: "from-blue-500 to-cyan-500",
+    icon: Harts,
   },
   {
     id: 2,
-    company: "StartupXYZ",
-    position: "Frontend Developer",
-    period: "2020 - 2022",
+    company: "PT Bank Mandiri (Persero) Tbk.",
+    position: "Software Engineer",
+    period: "Sep 2022 - Des 2023 | 1 thn 4 bln",
+    location: "Jakarta Selatan, Jakarta Raya, Indonesia",
     description:
-      "Built responsive web applications and mobile apps using React Native. Collaborated with design team to implement pixel-perfect UI/UX.",
-    technologies: ["React", "React Native", "JavaScript", "Redux", "Figma"],
+      "1. Gained experience in Front End Development, delivering responsive and user friendly interfaces.\n2. Proficient in Angular, dynamic, modular, and scalable single-page applications.\n3. Experienced in using Tailwind CSS to craft responsive, accessible, and visually appealing user interfaces while reducing build times.\n4. Built and maintained web apps, creating lightweight, efficient client applications optimized for seamless user experience.\n5. Participated in the development of the KSM (Supply Chain Management) platform, enhancing procurement and inventory management for BUMN.\n6. Maintained and enhanced the LKM Backoffice system, ensuring optimal performance, reliability, and user-centered functionality. Additionally contributed to the migration from Angular 10 to Angular 14, improving maintainability and scalability of the application.\n7. Contributed to the development of Unit Network/Sukha, delivering modern and high quality UI/UX designs and best practices with minimal loading applications, supporting modern design standards.\n8. Supported and participated in UI/UX development, ensuring interfaces are not only functional but also engaging and user friendly.",
+    technologies: [
+      "Mini Program",
+      "Tailwind CSS",
+      "SASS",
+      "HTML5",
+      "Angular",
+      "TypeScript",
+      "JavaScript",
+    ],
     color: "from-purple-500 to-pink-500",
+    icon: Mandiri,
   },
   {
     id: 3,
-    company: "WebAgency Pro",
-    position: "Junior Developer",
-    period: "2019 - 2020",
+    company: "Pengadilan Agama Surabaya",
+    position: "IT Support",
+    period: "Mar 2021 - Sep 2022 | 1 thn 7 bln",
+    location: "Surabaya, Jawa Timur, Indonesia",
     description:
-      "Developed websites for clients using modern web technologies. Gained experience in project management and client communication.",
-    technologies: ["HTML", "CSS", "JavaScript", "WordPress", "PHP"],
+      "Managed the company's database and office intranet network as part of IT Support responsibilities, ensuring constant operations and the availability of reliable and efficient systems.",
+    technologies: [],
     color: "from-green-500 to-emerald-500",
+  },
+  {
+    id: 4,
+    company: "Universitas 17 Agustus 1945 Surabaya",
+    position: "Laboratory Assistant",
+    period: "Feb 2021 - Feb 2022 | 1 thn 1 bln",
+    location: "Surabaya, Jawa Timur, Indonesia",
+    description:
+      "I served as Laboratory Assistant for one year, where I was responsible for assisting students in practical sessions, preparing assessment materials, and ensuring students gained a solid understanding of practical processing concepts and their practical implementation.",
+    technologies: ["Digital Image Processing"],
+    color: "from-yellow-500 to-orange-500",
+  },
+  {
+    id: 5,
+    company: "PT Adhivasindo",
+    position: "Deep Learning Engineer",
+    period: "Nov 2020 - Jan 2021 | 3 bln",
+    location: "Indonesia",
+    description:
+      "Developed a Face Recognition system using Deep Learning techniques, implemented with Convolutional Neural Networks (CNN) while utilizing TensorFlow and Keras frameworks.",
+    technologies: [
+      "Digital Image Processing",
+      "Convolutional Neural Networks (CNN)",
+      "Deep Learning",
+    ],
+    color: "from-red-500 to-pink-500",
+    icon: Adhivasindo,
   },
 ];
 
@@ -146,7 +189,7 @@ export default function Experience() {
                 className={`absolute top-1/2 ${index % 2 === 0 ? "-right-6" : "-left-6"} w-4 h-4 bg-gradient-to-r ${exp.color} rounded-full transform -translate-y-1/2 hidden md:block`}
               ></div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-[100px]">
                 <div className="md:col-span-2">
                   <div
                     className={`inline-block px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r ${exp.color} rounded-full mb-4`}
@@ -177,16 +220,14 @@ export default function Experience() {
                     ))}
                   </div>
                 </div>
-
-                <div className="flex items-center justify-center">
-                  <div
-                    className={`w-24 h-24 bg-gradient-to-r ${exp.color} rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg`}
-                  >
-                    {exp.company
-                      .split(" ")
-                      .map(word => word[0])
-                      .join("")}
-                  </div>
+                <div style={{ marginTop: "20%"}}>
+                  {exp.icon && (
+                    <img
+                      style={{ width: "600px", height: "200px",}}
+                      src={exp.icon ? exp.icon.src : undefined}
+                      alt={`${exp.company} logo`}
+                    />
+                  )}
                 </div>
               </div>
             </div>

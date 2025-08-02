@@ -13,7 +13,7 @@ const skillCategories = [
     skills: [
       {
         name: "React",
-        level: 90,
+        level: 40,
         color: "bg-blue-500",
       },
       {
@@ -22,79 +22,31 @@ const skillCategories = [
         color: "bg-blue-600",
       },
       {
+        name: "JavaScript",
+        level: 90,
+        color: "bg-yellow-500",
+      },
+      { name: "HTML5", level: 95, color: "bg-orange-500" }, 
+      {
+        name: "CSS3",
+        level: 90,
+        color: "bg-purple-500",
+      },  
+      { name: "Angular", level: 80, color: "bg-red-500" },
+      {
+        name: "GSAP",
+        level: 30,
+        color: "bg-green-500",
+      },
+      {
         name: "Next.js",
-        level: 80,
+        level: 50,
         color: "bg-gray-800",
       },
       {
         name: "Tailwind CSS",
         level: 95,
         color: "bg-cyan-500",
-      },
-      {
-        name: "GSAP",
-        level: 75,
-        color: "bg-green-500",
-      },
-    ],
-  },
-  {
-    title: "Backend",
-    skills: [
-      {
-        name: "Node.js",
-        level: 85,
-        color: "bg-green-600",
-      },
-      {
-        name: "Python",
-        level: 80,
-        color: "bg-yellow-500",
-      },
-      {
-        name: "PostgreSQL",
-        level: 85,
-        color: "bg-blue-700",
-      },
-      {
-        name: "MongoDB",
-        level: 75,
-        color: "bg-green-700",
-      },
-      {
-        name: "AWS",
-        level: 70,
-        color: "bg-orange-500",
-      },
-    ],
-  },
-  {
-    title: "Tools & Others",
-    skills: [
-      {
-        name: "Git",
-        level: 90,
-        color: "bg-red-500",
-      },
-      {
-        name: "Docker",
-        level: 75,
-        color: "bg-blue-500",
-      },
-      {
-        name: "Figma",
-        level: 85,
-        color: "bg-purple-500",
-      },
-      {
-        name: "Linux",
-        level: 80,
-        color: "bg-gray-700",
-      },
-      {
-        name: "Agile/Scrum",
-        level: 85,
-        color: "bg-indigo-500",
       },
     ],
   },
@@ -161,7 +113,7 @@ export default function Skills() {
       // Skill bars animation
       skillBarsRef.current.forEach((bar, index) => {
         if (bar) {
-          const level = bar.dataset.level;
+          const level = bar.dataset.level || "0";
 
           gsap.to(bar, {
             width: `${level}%`,
@@ -181,23 +133,23 @@ export default function Skills() {
   }, []);
 
   return (
-    <section id="skills" ref={sectionRef} className="py-20 bg-white dark:bg-gray-900">
+    <section id="skills" ref={sectionRef} className="py-20 bg-white dark:bg-gray-900 flex justify-center items-center">
       <div className="container mx-auto px-6">
         <h2
           ref={titleRef}
-          className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+          className="text-4xl h-[100px] md:text-5xl font-bold text-center mb-8 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
         >
           Skills & Technologies
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex gap-8 justify-center align-center">
           {skillCategories.map((category, categoryIndex) => (
             <div
               key={category.title}
               ref={el => {
                 if (el) categoriesRef.current[categoryIndex] = el;
               }}
-              className="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl shadow-lg"
+              className="bg-gray-100 w-full dark:bg-gray-800 p-8 rounded-2xl"
             >
               <h3 className="text-2xl font-bold text-[#010101] dark:text-[#ffffff] mb-6 text-center">
                 {category.title}
@@ -225,7 +177,7 @@ export default function Skills() {
                           data-level={skill.level}
                           className={`h-full ${skill.color} rounded-full transition-all duration-300`}
                           style={{
-                            width: "0%",
+                            width: `${skill.level}%`,
                           }}
                         ></div>
                       </div>

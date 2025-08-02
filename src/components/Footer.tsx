@@ -46,11 +46,10 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
-              John Doe
+              Daf Akwal Reynaldi
             </h3>
             <p className="text-[#ffffff] leading-relaxed mb-6">
-              Passionate developer creating digital experiences that make a difference. Always
-              learning, always building, always pushing the boundaries of what's possible.
+              AI Deep Learning Enthusiast | Front-End Developer | Angular & Tailwind CSS Specialist
             </p>
             <div className="flex space-x-4">
               <a
@@ -141,15 +140,15 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-[#ffffff]">
-              <li>john.doe@example.com</li>
-              <li>+1 (555) 123-4567</li>
-              <li>San Francisco, CA</li>
+              <li>dafakwalr@gmail.com</li>
+              <li>+62 81246651694</li>
+              <li>Surabaya, Indonesia</li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">© 2024 John Doe. All rights reserved.</p>
+          
 
           <button
             onClick={scrollToTop}
